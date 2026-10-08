@@ -1,0 +1,2 @@
+{"name":"scene-detector","version":"1.0.0","private":true,"type":"module",
+"scripts":{"fetch":"node scripts/fetch-assets.mjs","verify":"node scripts/verify.mjs","test":"node test-tracker.mjs","check":"node --check app.js && node --check tracker.js && node --check sw.js && node --check scripts/fetch-assets.mjs && node --check scripts/verify.mjs","dev":"npx http-server . -p 8080 -c-1"}}

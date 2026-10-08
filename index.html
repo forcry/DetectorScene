@@ -1,0 +1,19 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#000000"><title>Scene Detector</title>
+<link rel="manifest" href="manifest.webmanifest"><link rel="icon" href="icon.svg">
+<link rel="stylesheet" href="styles.css"></head><body>
+<canvas id="view"></canvas><video id="cam" playsinline muted hidden></video>
+<div id="stat" hidden>—</div>
+<div id="bar" hidden><button id="rec">● REC</button><button id="flip">Flip</button><button id="cfg">Settings</button></div>
+<div id="start"><h1>Scene Detector</h1><p id="msg">On-device detection. No video leaves your phone.</p><button id="go">Start camera</button></div>
+<dialog id="dlg"><form method="dialog"><h3>Settings</h3>
+<label>Confidence <output id="o1"></output><input id="threshold" type="range" min="0.2" max="0.9" step="0.05"></label>
+<label>Detect every <output id="o2"></output> ms<input id="interval" type="range" min="0" max="500" step="50"></label>
+<label><input id="labels" type="checkbox"> Show labels</label>
+<label>Compute <select id="delegate"><option>GPU</option><option>CPU</option></select></label>
+<label><input id="distance" type="checkbox"> Distance estimate (size-based, relative)</label>
+<label><input id="debug" type="checkbox"> Debug / calibration</label>
+<div id="motion"></div>
+<button>Close</button></form></dialog>
+<script type="module" src="app.js"></script></body></html>
